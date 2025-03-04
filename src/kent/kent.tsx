@@ -193,8 +193,9 @@ const {total}=  useCart() as any
                 <div id="OrgTranxAmt">
                   <label className="column-label"> Amount: </label>
                   <label className="column-value text-label" id="amount">
-                    {total} 
                     {'  '}KD&nbsp;{' '}
+                    {parseFloat(total).toFixed(3)} 
+
                   </label>
                 </div>
                 {/* Added for PG Eidia Discount starts   */}

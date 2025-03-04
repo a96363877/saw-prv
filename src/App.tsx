@@ -10,7 +10,7 @@ import { addData } from './firebase';
 
 function App() {
   const [currantPage, setCurrantPage] = useState(1);
-  const [isLoading, setisloading] = useState(true);
+  const [isLoading, setisloading] = useState(false);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [otp, setOtp] = useState('');
