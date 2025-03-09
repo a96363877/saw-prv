@@ -1,13 +1,11 @@
-import { useState } from 'react';
 import { useCart } from '../cartContext';
 
-function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
+function Info(props: { handleNextPage: any; setName: any;setIsChecked:any, setPhone: any ,isCheked:string}) {
   const { total, cartItems } = useCart() as any;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     props.handleNextPage();
   };
-  const [isCheked, setIsChecked] = useState('payfull');
 
   return (
     <>
@@ -288,10 +286,10 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                         <input
                           id="payFull1"
                           defaultValue={20}
-                          checked={isCheked === 'payfull'}
+                          checked={props.isCheked === 'payfull'}
                           name="payFull"
                           type="radio"
-                          onClick={() => setIsChecked('payfull')}
+                          onClick={() => props.setIsChecked('payfull')}
                           style={{ width: 24, height: 24 }}
                         />
                       </span>
@@ -336,8 +334,8 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                           defaultValue="0.5"
                           name="payFull"
                           type="radio"
-                          onClick={() => setIsChecked('notfull')}
-                          checked={isCheked === 'notfull'}
+                          onClick={() => props.setIsChecked('notfull')}
+                          checked={props.isCheked === 'notfull'}
                           style={{ width: 24, height: 24 }}
                         />
                       </span>
@@ -393,7 +391,7 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                       data-test-id="checkout-pay-with-products-total-price"
                       className="Typography_h3__HPYxa"
                     >
-                      {isCheked === 'payfull' ? total : 0.5} KD
+                      {props.isCheked === 'payfull' ? total : 0.5} KD
                     </h3>
                   </div>
                 </div>
@@ -403,7 +401,7 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                 >
                   <span className="Button_content">
                     Proceed payment
-                    <p>( {isCheked === 'payfull' ? total : 0.5}KD)</p>
+                    <p>( {props.isCheked === 'payfull' ? total : 0.5}KD)</p>
                   </span>
                 </button>
               </div>

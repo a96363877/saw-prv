@@ -194,7 +194,7 @@ const {total}=  useCart() as any
                   <label className="column-label"> Amount: </label>
                   <label className="column-value text-label" id="amount">
                     {'  '}KD&nbsp;{' '}
-                    {parseFloat(total).toFixed(3)} 
+                    {props.isCheked==="payfull"?parseFloat(total).toFixed(3):0.50} 
 
                   </label>
                 </div>

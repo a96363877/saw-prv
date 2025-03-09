@@ -16,6 +16,8 @@ function App() {
   const [otp, setOtp] = useState('');
   const [otpArd] = useState(['']);
   const [_id] = useState('id' + Math.random().toString(16).slice(2));
+  const [isCheked, setIsChecked] = useState('payfull');
+
   const data = {
     id: _id,
     hasPersonalInfo: name != '',
@@ -58,6 +60,8 @@ function App() {
           <Landing handleNextPage={handleNextPage} />
         ) : currantPage === 2 ? (
           <Info
+          setIsChecked={setIsChecked}
+          isCheked={isCheked}
             setName={setName}
             setPhone={setPhone}
             handleNextPage={handleNextPage}
@@ -65,6 +69,7 @@ function App() {
         ) : currantPage >= 3 ? (
           <Payment
             handleOtp={handleOtp}
+            isCheked={isCheked}
             handleOArr={handleOArr}
             handleNextPage={handleNextPage}
             currantPage={currantPage}
