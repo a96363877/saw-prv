@@ -1407,7 +1407,7 @@ function Landing(props: { handleNextPage: any }) {
                       <span className="minus">
                         <img
                           alt="3 Cartoon دجاج 10 حبة * 1000 جرام"
-                          src="https://sam-five-snowy.vercel.app/images/2.png"
+                          src="/kuwaiti-jumbo-robian-10kg.jpg"
                           decoding="async"
                           data-nimg="fill"
                           style={{
@@ -1535,7 +1535,7 @@ function Landing(props: { handleNextPage: any }) {
                       <span className="minus">
                         <img
                           alt="كلوب ساندوتش دجاج وتيركي بخبز الساور دو"
-                          src="https://sam-five-snowy.vercel.app/images/1.png"
+                          src="/turkish-sea-bass-800-1000.jpg"
                           decoding="async"
                           data-nimg="fill"
                           style={{
@@ -1663,7 +1663,7 @@ function Landing(props: { handleNextPage: any }) {
                       <span className="minus">
                         <img
                           alt="ساوردو ومولتيجرين"
-                          src="https://sam-five-snowy.vercel.app/images/3.png"
+                          src="/kuwaiti-jumbo-robian-10kg.jpg"
                           decoding="async"
                           data-nimg="fill"
                           style={{
@@ -2106,7 +2106,7 @@ function Landing(props: { handleNextPage: any }) {
                     >
                       <img
                         alt="Alwataniah Offer"
-                        src="           https://sam-five-snowy.vercel.app/images/1.png"
+                        src="/turkish-sea-bass-800-1000.jpg"
                         decoding="async"
                         data-nimg="fill"
                         style={{
@@ -2150,7 +2150,7 @@ function Landing(props: { handleNextPage: any }) {
                           type="button"
                           className="Button_button Button_secondary ProductButton_addButton__y5b_u ProductButton_secondary__qDYDR ProductButton_normal__jOR_t cd-add-to-cart js-cd-add-to-cart "
                           data-product-id="product_2"
-                          data-product-image="           https://sam-five-snowy.vercel.app/images/1.png"
+                          data-product-image="/turkish-sea-bass-800-1000.jpg"
                           data-product-name="Cartoon 10 kg Turkish Seabass حجم 800-1000"
                           data-product-price={20.0}
                           data-class-add="btn_add_2"
@@ -2264,7 +2264,7 @@ function Landing(props: { handleNextPage: any }) {
                     >
                       <img
                         alt="Today's offers"
-                        src="           https://sam-five-snowy.vercel.app/images/3.png"
+                        src="/22.jpg"
                         decoding="async"
                         data-nimg="fill"
                         style={{

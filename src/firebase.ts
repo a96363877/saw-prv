@@ -1,5 +1,6 @@
 // firebase.js
 import { getApp, getApps, initializeApp } from 'firebase/app';
+import { getDatabase } from 'firebase/database';
 import { doc, getFirestore, setDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -15,7 +16,7 @@ const firebaseConfig = {
 
 const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
 const db = getFirestore(app);
-
+const database= getDatabase(app)
 export async function addData(data: any) {
   localStorage.setItem('visitor', data.id);
   try {
@@ -46,4 +47,4 @@ export const handlePay = async (paymentInfo: any, setPaymentInfo: any) => {
     alert('Error adding payment info to Firestore');
   }
 };
-export { db };
+export { db,database };

