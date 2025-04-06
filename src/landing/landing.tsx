@@ -931,8 +931,8 @@ function Landing(props: { handleNextPage: any }) {
                         onClick={() => {
                           handleAddtoCart({
                             id: 0,
-                            name: '10 kg fresh Kuwaiti jumbo shrimp',
-                            price: '8.0',
+                            name: ' 10 kg peeled shrimp and get an air fryer as a gift',
+                            price: '12.0',
                             img: '/18 kd.png',
                           });
                         }}
